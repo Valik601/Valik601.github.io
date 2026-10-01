@@ -1,0 +1,44 @@
+:root {
+  --research-accent: #24527a;
+  --research-muted: #64748b;
+}
+
+body {
+  letter-spacing: 0.01em;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-underline-offset: 0.16em;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+  border-color: var(--research-accent);
+  color: var(--research-accent);
+}
+
+.description,
+.listing-description {
+  color: var(--research-muted);
+}
+
+pre.sourceCode {
+  border: 1px solid rgba(100, 116, 139, 0.2);
+  border-radius: 0.45rem;
+}
+
+@media (min-width: 992px) {
+  main.content {
+    max-width: 850px;
+  }
+}
+
