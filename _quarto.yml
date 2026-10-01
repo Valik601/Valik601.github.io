@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Valik · 科研动态"
+  title: "W.Keith · 科研动态"
   site-url: "https://valik601.github.io"
   description: "记录科研进展、论文阅读、实验心得与开源项目"
   favicon: assets/favicon.svg
@@ -26,11 +26,11 @@ website:
     type: overlay
   open-graph: true
   page-footer:
-    center: "© 2026 Valik · Built with Quarto"
+    center: "© 2026 W.Keith · Built with Quarto"
 
 format:
   html:
-    theme: litera
+    theme: flatly
     css: styles.css
     toc: true
     toc-depth: 3

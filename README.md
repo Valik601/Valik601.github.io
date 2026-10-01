@@ -1,4 +1,4 @@
-# Valik · 科研动态
+# W.Keith · 科研动态
 
 这是 <https://valik601.github.io> 的 Quarto 源代码。
 
@@ -10,9 +10,9 @@
 quarto preview
 ```
 
-## 新建文章
+## 写作与发布
 
-在 `posts/YYYY-MM-DD-slug/` 下创建 `index.qmd`。写作时使用 `draft: true`，发布前改为 `draft: false`。
+完整流程参见 [GUIDE.md](GUIDE.md)。最简流程是在 `posts/YYYY-MM-DD-slug/` 下创建 `index.qmd`，写作时使用 `draft: true`，发布前改为 `draft: false`。
 
 ```powershell
 quarto preview
