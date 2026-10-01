@@ -1,0 +1,23 @@
+---
+title: "关于"
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/Valik601
+---
+
+## 关于本站
+
+这是 Valik 的个人科研博客，用于持续记录：
+
+- 科研进展与阶段性总结；
+- 论文阅读笔记与学术思考；
+- 实验设计、复现过程与失败经验；
+- 开源项目、工具与工程实践。
+
+## 研究兴趣
+
+请在这里补充你的研究方向、教育背景、联系方式和个人简介。
+

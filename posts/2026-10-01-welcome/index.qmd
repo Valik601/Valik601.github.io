@@ -1,0 +1,44 @@
+---
+title: "新的开始：科研动态博客"
+description: "记录这个博客的用途、写作方式与后续计划"
+date: 2026-10-01
+categories:
+  - 研究进展
+  - 站点记录
+draft: false
+---
+
+这个博客将用于记录科研过程，而不只是展示已经完成的结果。
+
+## 计划记录的内容
+
+- 论文阅读笔记；
+- 实验设计、结果与失败经验；
+- 阶段性的研究总结；
+- 开源项目与工具使用心得。
+
+## 数学公式
+
+行内公式可以直接书写，例如 $p(y \mid x)$。块级公式同样使用 LaTeX：
+
+$$
+\operatorname{Attention}(Q,K,V)
+=
+\operatorname{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V.
+$$
+
+## 代码
+
+```python
+def running_mean(values):
+    return sum(values) / len(values)
+```
+
+## 文献引用
+
+Quarto 可以从 BibTeX 文件生成正文引用和参考文献。例如，文学化编程强调让程序更适合人类阅读 [@knuth1984literate]。
+
+## 下一步
+
+后续会逐步补充个人简介、研究方向和真实项目。
+

@@ -1,0 +1,14 @@
+---
+title: "科研动态"
+description: "研究进展、论文阅读、实验记录与学术思考"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  page-size: 10
+---
+
+这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。
+
