@@ -14,13 +14,6 @@
     "text": "项目模板\n\n项目名称\n\n问题：项目试图解决什么问题？\n方法：采用了什么方法？\n结果：目前有哪些结果？\n资源：代码仓库"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "科研动态",
-    "section": "",
-    "text": "这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n新的开始：科研动态博客\n\n\n\n研究进展\n\n站点记录\n\n\n\n记录这个博客的用途、写作方式与后续计划\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n无匹配项"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "关于",
@@ -40,6 +33,13 @@
     "title": "关于",
     "section": "研究兴趣",
     "text": "研究兴趣\n请在这里补充你的研究方向、教育背景、联系方式和个人简介。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "科研动态",
+    "section": "",
+    "text": "这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n新的开始：科研动态博客\n\n\n\n研究进展\n\n站点记录\n\n\n\n记录这个博客的用途、写作方式与后续计划\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "posts/2026-10-01-welcome/index.html",
