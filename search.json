@@ -14,6 +14,41 @@
     "text": "项目模板\n\n项目名称\n\n问题：项目试图解决什么问题？\n方法：采用了什么方法？\n结果：目前有哪些结果？\n资源：代码仓库"
   },
   {
+    "objectID": "posts/2026-10-01-TaxiGPS/index.html",
+    "href": "posts/2026-10-01-TaxiGPS/index.html",
+    "title": "出租车数据清洗",
+    "section": "",
+    "text": "之后的项目走向大概是：\nTaxi GPS - Map Matching - Road Level traffic State\nRainfall + DEM +SAR - Flood Disturbance State\nRoad Topology + Normal Traffic Dependency + Disaster Disturbance\n- Dynamic Spatiotemporal Graph - Traffic Forecasting Under Extreme Weather"
+  },
+  {
+    "objectID": "posts/2026-10-01-TaxiGPS/index.html#背景",
+    "href": "posts/2026-10-01-TaxiGPS/index.html#背景",
+    "title": "出租车数据清洗",
+    "section": "",
+    "text": "之后的项目走向大概是：\nTaxi GPS - Map Matching - Road Level traffic State\nRainfall + DEM +SAR - Flood Disturbance State\nRoad Topology + Normal Traffic Dependency + Disaster Disturbance\n- Dynamic Spatiotemporal Graph - Traffic Forecasting Under Extreme Weather"
+  },
+  {
+    "objectID": "posts/2026-10-01-TaxiGPS/index.html#核心内容",
+    "href": "posts/2026-10-01-TaxiGPS/index.html#核心内容",
+    "title": "出租车数据清洗",
+    "section": "核心内容",
+    "text": "核心内容\n目前的工作聚焦于Taxi GPS - Map Matching - Road Level Traffic State\n\n时间窗口的对齐\n\nGPS数据聚焦于2019年的某日，所以路网也必须是2019年的路网。直接从OSM获得的路网明显不满足该条件\n\nGPS数据的清洗\n路网匹配的具体操作"
+  },
+  {
+    "objectID": "posts/2026-10-01-TaxiGPS/index.html#具体步骤",
+    "href": "posts/2026-10-01-TaxiGPS/index.html#具体步骤",
+    "title": "出租车数据清洗",
+    "section": "具体步骤",
+    "text": "具体步骤\n首先找到当时的路网信息，这是基础中的基础。\n进行Overpass查询\n[out:xml][timeout:300][date:\"2019-09-30T15:59:59Z\"];\n\n// 1. 获取下载框内的全部 highway ways。\n// 顺序：南纬度、西经度、北纬度、东经度。\n// 此处不按道路等级、限速是否填写或单行标签是否填写筛选。\nway[\"highway\"](22.48,113.96,22.63,114.13)-&gt;.roads;\n\n// 2. 获取上述道路的全部节点，包括位于下载框之外的成员节点。\nnode(w.roads)-&gt;.road_nodes;\n\n// 3. 获取以这些道路或道路节点为成员的转向限制关系。\n// 不再次用下载框截断关系，以保留边缘道路涉及的限制。\n(\n  rel(bw.roads)[\"type\"~\"^restriction(:.*)?$\"];\n  rel(bn.road_nodes)[\"type\"~\"^restriction(:.*)?$\"];\n)-&gt;.restrictions;\n\n// 4. 补充框内交通控制和障碍节点。\n// 已经属于道路的节点也会出现，但集合会自动去重。\n(\n  node[\"highway\"~\"^(traffic_signals|stop|give_way)$\"]\n      (22.48,113.96,22.63,114.13);\n  node[\"barrier\"](22.48,113.96,22.63,114.13);\n)-&gt;.control_nodes;\n\n// 5. 合并道路、节点和限制关系。\n(\n  .roads;\n  .road_nodes;\n  .restrictions;\n  .control_nodes;\n);\n\n// 6. 递归补齐关系成员、成员道路及其节点，保留原集合。\n(\n  ._;\n  &gt;&gt;;\n);\n\n// 7. 输出完整对象、全部已有标签及版本元数据。\nout meta;\n[out:xml][timeout:600][date:\"2019-09-30T15:59:59Z\"];\n\n/*\n福田区及周边下载框\n顺序：南纬度，西经度，北纬度，东经度\n范围大于福田行政边界，用于保留边缘道路连接。\n*/\n\n// 1. 获取全部 highway way。\n// 本阶段不按道路等级、oneway、maxspeed 或 access 完整程度筛选。\nway\n  [\"highway\"]\n  (22.48,113.96,22.63,114.13)\n  -&gt;.roads;\n\n// 2. 获取每条道路的全部原始节点。\nnode(w.roads)-&gt;.road_nodes;\n\n// 3. 获取与道路或道路节点相关的转向限制关系。\n// 包括 type=restriction 及 restriction:* 类型。\n(\n  rel(bw.roads)\n    [\"type\"~\"^restriction(:.*)?$\"];\n\n  rel(bn.road_nodes)\n    [\"type\"~\"^restriction(:.*)?$\"];\n)-&gt;.restrictions;\n\n// 4. 补充研究区内交通控制与道路障碍节点。\n(\n  node\n    [\"highway\"~\"^(traffic_signals|stop|give_way|mini_roundabout|motorway_junction)$\"]\n    (22.48,113.96,22.63,114.13);\n\n  node\n    [\"barrier\"]\n    (22.48,113.96,22.63,114.13);\n)-&gt;.control_nodes;\n\n// 5. 合并原始道路、道路节点、限制关系和控制节点。\n(\n  .roads;\n  .road_nodes;\n  .restrictions;\n  .control_nodes;\n)-&gt;.selected;\n\n// 6. 递归补齐 relation 成员、成员 way 及其节点。\n// 边界附近的限制关系可能引用下载框外的短道路，因此不再次裁框。\n.selected &gt;&gt; -&gt;.members;\n\n(\n  .selected;\n  .members;\n);\n\n// 7. 输出全部已有标签以及版本、时间和 changeset 元数据。\nout meta;\n查询结果如下图："
+  },
+  {
+    "objectID": "posts/2026-10-01-TaxiGPS/index.html#结论与思考",
+    "href": "posts/2026-10-01-TaxiGPS/index.html#结论与思考",
+    "title": "出租车数据清洗",
+    "section": "结论与思考",
+    "text": "结论与思考\n\n得到了什么结论？\n证据是否充分？\n下一步准备做什么？"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "关于",
@@ -39,7 +74,7 @@
     "href": "index.html",
     "title": "科研动态",
     "section": "",
-    "text": "这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n新的开始：科研动态博客\n\n\n\n研究进展\n\n站点记录\n\n\n\n记录这个博客的用途、写作方式与后续计划\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n无匹配项"
+    "text": "这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n出租车数据清洗\n\n\n\n论文阅读\n\n研究方向\n\n\n\n使用某种方法进行了路网匹配\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n\n\n\n\n\n\n\n新的开始：科研动态博客\n\n\n\n研究进展\n\n站点记录\n\n\n\n记录这个博客的用途、写作方式与后续计划\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n无匹配项"
   },
   {
     "objectID": "posts/2026-10-01-welcome/index.html",
