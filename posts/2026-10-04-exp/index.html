@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="研究进展、论文阅读、实验记录与学术思考">
+<meta name="description" content="让实验结果经得起考验">
 
-<title>科研动态 – W.Keith · 科研动态</title>
+<title>可复现实验标准 – W.Keith · 科研动态</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,29 +27,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d6fda100fe18d474d5dd5e176a9ee7d1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d6fda100fe18d474d5dd5e176a9ee7d1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,83 +93,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "搜索"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="W.Keith · 科研动态" href="index.xml" data-external="1"><meta property="og:title" content="科研动态 – W.Keith · 科研动态">
-<meta property="og:description" content="研究进展、论文阅读、实验记录与学术思考">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="可复现实验标准 – W.Keith · 科研动态">
+<meta property="og:description" content="让实验结果经得起考验">
 <meta property="og:site_name" content="W.Keith · 科研动态">
 </head>
 
@@ -163,7 +108,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">W.Keith · 科研动态</span>
     </a>
   </div>
@@ -174,15 +119,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">动态</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">项目</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">关于</span></a>
   </li>  
 </ul>
@@ -193,7 +138,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -209,19 +154,30 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">分类</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">全部 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU1JUFFJTlFJUU5JUFBJThDJUU2JUEwJTg3JUU1JTg3JTg2">实验标准 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU3JUEwJTk0JUU3JUE5JUI2JUU2JTk2JUI5JUU1JTkwJTkx">研究方向 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU3JUEwJTk0JUU3JUE5JUI2JUU4JUJGJTlCJUU1JUIxJTk1">研究进展 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU3JUFCJTk5JUU3JTgyJUI5JUU4JUFFJUIwJUU1JUJEJTk1">站点记录 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU4JUFFJUJBJUU2JTk2JTg3JUU5JTk4JTg1JUU4JUFGJUJC">论文阅读 <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">该页面内容</h2>
+   
+  <ul>
+  <li><a href="#背景" id="toc-背景" class="nav-link active" data-scroll-target="#背景">背景</a></li>
+  <li><a href="#核心内容" id="toc-核心内容" class="nav-link" data-scroll-target="#核心内容">核心内容</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">科研动态</h1>
-</div>
+<h1 class="title">可复现实验标准</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">实验标准</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    研究进展、论文阅读、实验记录与学术思考
+    让实验结果经得起考验
   </div>
 </div>
 
@@ -229,7 +185,19 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">发布于</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2026年10月4日</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">修改于</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2026年10月4日</p>
+    </div>
+  </div>
     
   </div>
   
@@ -238,101 +206,45 @@ window.Quarto = {
 </header>
 
 
-<p>这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。</p>
+<section id="背景" class="level2">
+<h2 class="anchored" data-anchor-id="背景">背景</h2>
+<p>复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 <span class="citation" data-cites="Sandve">(<a href="#ref-Sandve" role="doc-biblioref">Sandve 等 2013年</a>)</span>。</p>
+</section>
+<section id="核心内容" class="level2">
+<h2 class="anchored" data-anchor-id="核心内容">核心内容</h2>
+<p>Rule 1: For every result, keep track of how it as produced</p>
+<p>我们要记录所有实验结果是如何产生的。</p>
+<p>Rule 2: Avoid manual data manipulation steps</p>
+<p>避免人工操作数据的步骤。</p>
+<p>Rule 3: Archive the exact versions of all external programs used</p>
+<p>记录所用的外部程序的版本。</p>
+<p>Rule 4: Version control all custom scripts</p>
+<p>对所有脚本进行版本控制。就是每一版脚本更新一次版本号，如果可以的话加上更新的说明。</p>
+<p>Rule 5: Record all intermediate results, when possible in standardized formats</p>
+<p>在一个标准化的形式下记录所有中间过程的结果。</p>
+<p>Rule 6: For analyses that include randomness, note underlying random seeds</p>
+<p>对于那些用随机数生成器产生的结果，一定要提随机数种子。</p>
+<p>Rule 7: Always store raw data behind plots</p>
+<p>一定要保留原始数据。</p>
+<p>Rule 8: Generate hierarchical analysis output, allowing layers of increasing detail to be inspected</p>
+<p>生成有层次的数据分析，让每一层数据都能够避免被忽视。</p>
+<p>Rule 9: Connect textual statements to underlying results</p>
+<p>对每一个结果都进行文字说明。</p>
+<p>Rule 10: Provide public access to scripts ,runs, and results.</p>
+<p>向社会公开脚本、实验过程和结果。</p>
+</section>
+<section id="section" class="level2">
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="JUU1JUFFJTlFJUU5JUFBJThDJUU2JUEwJTg3JUU1JTg3JTg2" data-listing-date-sort="1791072000000" data-listing-file-modified-sort="1791096923859" data-listing-date-modified-sort="1791072000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
-<div class="thumbnail"><a href="./posts/2026-10-04-exp/index.html" class="no-external">
+</section>
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-10-04-exp/index.html" class="no-external">可复现实验标准</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUFFJTlFJUU5JUFBJThDJUU2JUEwJTg3JUU1JTg3JTg2'); return false;">实验标准</div>
-
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">参考文献</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Sandve" class="csl-entry" role="listitem">
+Sandve, GeirKjetil), GK(Sandve, Anton) Nekrutenko A(Nekrutenko, James) Taylor J(Taylor, 和 Eivind) Hovig E(Hovig. 2013年. <span>《Ten Simple Rules for Reproducible Computational Research》</span>. <em>PLOS Computational Biology</em>, e1003285.
 </div>
-<div class="delink listing-description"><a href="./posts/2026-10-04-exp/index.html" class="no-external">
-<p>让实验结果经得起考验</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-10-04-exp/index.html" class="no-external">
-<div class="listing-date">
-2026年10月4日
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="JUU4JUFFJUJBJUU2JTk2JTg3JUU5JTk4JTg1JUU4JUFGJUJCJTJDJUU3JUEwJTk0JUU3JUE5JUI2JUU2JTk2JUI5JUU1JTkwJTkx" data-listing-date-sort="1790812800000" data-listing-file-modified-sort="1791096923859" data-listing-date-modified-sort="1790985600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="188">
-<div class="thumbnail"><a href="./posts/2026-10-01-TaxiGPS/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2026-10-01-TaxiGPS/images/paste-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-10-01-TaxiGPS/index.html" class="no-external">出租车数据清洗</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU4JUFFJUJBJUU2JTk2JTg3JUU5JTk4JTg1JUU4JUFGJUJC'); return false;">论文阅读</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUEwJTk0JUU3JUE5JUI2JUU2JTk2JUI5JUU1JTkwJTkx'); return false;">研究方向</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-10-01-TaxiGPS/index.html" class="no-external">
-<p>使用某种方法进行了路网匹配</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-10-01-TaxiGPS/index.html" class="no-external">
-<div class="listing-date">
-2026年10月1日
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="JUU3JUEwJTk0JUU3JUE5JUI2JUU4JUJGJTlCJUU1JUIxJTk1JTJDJUU3JUFCJTk5JUU3JTgyJUI5JUU4JUFFJUIwJUU1JUJEJTk1" data-listing-date-sort="1790812800000" data-listing-file-modified-sort="1791096923859" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
-<div class="thumbnail"><a href="./posts/2026-10-01-welcome/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2026-10-01-welcome/index.html" class="no-external">新的开始：科研动态博客</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUEwJTk0JUU3JUE5JUI2JUU4JUJGJTlCJUU1JUIxJTk1'); return false;">研究进展</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('JUU3JUFCJTk5JUU3JTgyJUI5JUU4JUFFJUIwJUU1JUJEJTk1'); return false;">站点记录</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/2026-10-01-welcome/index.html" class="no-external">
-<p>记录这个博客的用途、写作方式与后续计划</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2026-10-01-welcome/index.html" class="no-external">
-<div class="listing-date">
-2026年10月1日
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">无匹配项</div>
-</div></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

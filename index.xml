@@ -10,7 +10,58 @@
 <atom:link href="https://valik601.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>研究进展、论文阅读、实验记录与学术思考</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 04 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>可复现实验标准</title>
+  <link>https://valik601.github.io/posts/2026-10-04-exp/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="背景" class="level2">
+<h2 class="anchored" data-anchor-id="背景">背景</h2>
+<p>复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 <span class="citation" data-cites="Sandve">(Sandve 等 2013年)</span>。</p>
+</section>
+<section id="核心内容" class="level2">
+<h2 class="anchored" data-anchor-id="核心内容">核心内容</h2>
+<p>Rule 1: For every result, keep track of how it as produced</p>
+<p>我们要记录所有实验结果是如何产生的。</p>
+<p>Rule 2: Avoid manual data manipulation steps</p>
+<p>避免人工操作数据的步骤。</p>
+<p>Rule 3: Archive the exact versions of all external programs used</p>
+<p>记录所用的外部程序的版本。</p>
+<p>Rule 4: Version control all custom scripts</p>
+<p>对所有脚本进行版本控制。就是每一版脚本更新一次版本号，如果可以的话加上更新的说明。</p>
+<p>Rule 5: Record all intermediate results, when possible in standardized formats</p>
+<p>在一个标准化的形式下记录所有中间过程的结果。</p>
+<p>Rule 6: For analyses that include randomness, note underlying random seeds</p>
+<p>对于那些用随机数生成器产生的结果，一定要提随机数种子。</p>
+<p>Rule 7: Always store raw data behind plots</p>
+<p>一定要保留原始数据。</p>
+<p>Rule 8: Generate hierarchical analysis output, allowing layers of increasing detail to be inspected</p>
+<p>生成有层次的数据分析，让每一层数据都能够避免被忽视。</p>
+<p>Rule 9: Connect textual statements to underlying results</p>
+<p>对每一个结果都进行文字说明。</p>
+<p>Rule 10: Provide public access to scripts ,runs, and results.</p>
+<p>向社会公开脚本、实验过程和结果。</p>
+</section>
+<section id="section" class="level2">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">参考文献</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Sandve" class="csl-entry">
+Sandve, GeirKjetil), GK(Sandve, Anton) Nekrutenko A(Nekrutenko, James) Taylor J(Taylor, 和 Eivind) Hovig E(Hovig. 2013年. <span>《Ten Simple Rules for Reproducible Computational Research》</span>. <em>PLOS Computational Biology</em>, e1003285.
+</div>
+</div></section></div> ]]></description>
+  <category>实验标准</category>
+  <guid>https://valik601.github.io/posts/2026-10-04-exp/</guid>
+  <pubDate>Sun, 04 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>出租车数据清洗</title>
   <link>https://valik601.github.io/posts/2026-10-01-TaxiGPS/</link>
