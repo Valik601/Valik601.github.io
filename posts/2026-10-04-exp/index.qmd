@@ -1,0 +1,57 @@
+---
+title: "可复现实验标准"
+description: "让实验结果经得起考验"
+date: 2026-10-04
+date-modified: 2026-10-04
+categories:
+  - 实验标准
+draft: false
+---
+
+## 背景
+
+复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 [@Sandve]。
+
+## 核心内容
+
+Rule 1: For every result, keep track of how it as produced
+
+我们要记录所有实验结果是如何产生的。
+
+Rule 2: Avoid manual data manipulation steps
+
+避免人工操作数据的步骤。
+
+Rule 3: Archive the exact versions of all external programs used
+
+记录所用的外部程序的版本。
+
+Rule 4: Version control all custom scripts
+
+对所有脚本进行版本控制。就是每一版脚本更新一次版本号，如果可以的话加上更新的说明。
+
+Rule 5: Record all intermediate results, when possible in standardized formats
+
+在一个标准化的形式下记录所有中间过程的结果。
+
+Rule 6: For analyses that include randomness, note underlying random seeds
+
+对于那些用随机数生成器产生的结果，一定要提随机数种子。
+
+Rule 7: Always store raw data behind plots
+
+一定要保留原始数据。
+
+Rule 8: Generate hierarchical analysis output, allowing layers of increasing detail to be inspected
+
+生成有层次的数据分析，让每一层数据都能够避免被忽视。
+
+Rule 9: Connect textual statements to underlying results
+
+对每一个结果都进行文字说明。
+
+Rule 10: Provide public access to scripts ,runs, and results.
+
+向社会公开脚本、实验过程和结果。
+
+##
