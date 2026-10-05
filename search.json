@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "posts/published/2026-10-04-exp/index.html",
+    "href": "posts/published/2026-10-04-exp/index.html",
+    "title": "可复现实验标准",
+    "section": "",
+    "text": "复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 (Sandve 等 2013年)。"
+  },
+  {
+    "objectID": "posts/published/2026-10-04-exp/index.html#背景",
+    "href": "posts/published/2026-10-04-exp/index.html#背景",
+    "title": "可复现实验标准",
+    "section": "",
+    "text": "复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 (Sandve 等 2013年)。"
+  },
+  {
+    "objectID": "posts/published/2026-10-04-exp/index.html#核心内容",
+    "href": "posts/published/2026-10-04-exp/index.html#核心内容",
+    "title": "可复现实验标准",
+    "section": "核心内容",
+    "text": "核心内容\nRule 1: For every result, keep track of how it as produced\n我们要记录所有实验结果是如何产生的。\nRule 2: Avoid manual data manipulation steps\n避免人工操作数据的步骤。\nRule 3: Archive the exact versions of all external programs used\n记录所用的外部程序的版本。\nRule 4: Version control all custom scripts\n对所有脚本进行版本控制。就是每一版脚本更新一次版本号，如果可以的话加上更新的说明。\nRule 5: Record all intermediate results, when possible in standardized formats\n在一个标准化的形式下记录所有中间过程的结果。\nRule 6: For analyses that include randomness, note underlying random seeds\n对于那些用随机数生成器产生的结果，一定要提随机数种子。\nRule 7: Always store raw data behind plots\n一定要保留原始数据。\nRule 8: Generate hierarchical analysis output, allowing layers of increasing detail to be inspected\n生成有层次的数据分析，让每一层数据都能够避免被忽视。\nRule 9: Connect textual statements to underlying results\n对每一个结果都进行文字说明。\nRule 10: Provide public access to scripts ,runs, and results.\n向社会公开脚本、实验过程和结果。"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "关于",
+    "section": "",
+    "text": "这是 Keith W. 的个人博客，用于持续记录：\n\n科研进展与阶段性总结；\n论文阅读笔记与学术思考；\n实验设计、复现过程与失败经验；\n开源项目、工具与工程实践。"
+  },
+  {
+    "objectID": "about.html#关于本站",
+    "href": "about.html#关于本站",
+    "title": "关于",
+    "section": "",
+    "text": "这是 Keith W. 的个人博客，用于持续记录：\n\n科研进展与阶段性总结；\n论文阅读笔记与学术思考；\n实验设计、复现过程与失败经验；\n开源项目、工具与工程实践。"
+  },
+  {
+    "objectID": "about.html#研究兴趣",
+    "href": "about.html#研究兴趣",
+    "title": "关于",
+    "section": "研究兴趣",
+    "text": "研究兴趣\n请在这里补充你的研究方向、教育背景、联系方式和个人简介。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "科研动态",
+    "section": "",
+    "text": "这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n可复现实验标准\n\n\n\n实验标准\n\n\n\n让实验结果经得起考验\n\n\n\n\n\n2026年10月4日\n\n\n\n\n\n\n\n\n\n\n\n\n新的开始：科研动态博客\n\n\n\n研究进展\n\n站点记录\n\n\n\n记录这个博客的用途、写作方式与后续计划\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n无匹配项"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "项目",
@@ -54,54 +103,5 @@
     "title": "新的开始：科研动态博客",
     "section": "下一步",
     "text": "下一步\n后续会逐步补充个人简介、研究方向和真实项目。"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "关于",
-    "section": "",
-    "text": "这是 W.Keith 的个人科研博客，用于持续记录：\n\n科研进展与阶段性总结；\n论文阅读笔记与学术思考；\n实验设计、复现过程与失败经验；\n开源项目、工具与工程实践。"
-  },
-  {
-    "objectID": "about.html#关于本站",
-    "href": "about.html#关于本站",
-    "title": "关于",
-    "section": "",
-    "text": "这是 W.Keith 的个人科研博客，用于持续记录：\n\n科研进展与阶段性总结；\n论文阅读笔记与学术思考；\n实验设计、复现过程与失败经验；\n开源项目、工具与工程实践。"
-  },
-  {
-    "objectID": "about.html#研究兴趣",
-    "href": "about.html#研究兴趣",
-    "title": "关于",
-    "section": "研究兴趣",
-    "text": "研究兴趣\n请在这里补充你的研究方向、教育背景、联系方式和个人简介。"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "科研动态",
-    "section": "",
-    "text": "这里记录正在进行的研究、值得反复阅读的论文，以及实验过程中真正有用的经验。\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n可复现实验标准\n\n\n\n实验标准\n\n\n\n让实验结果经得起考验\n\n\n\n\n\n2026年10月4日\n\n\n\n\n\n\n\n\n\n\n\n\n新的开始：科研动态博客\n\n\n\n研究进展\n\n站点记录\n\n\n\n记录这个博客的用途、写作方式与后续计划\n\n\n\n\n\n2026年10月1日\n\n\n\n\n\n无匹配项"
-  },
-  {
-    "objectID": "posts/published/2026-10-04-exp/index.html",
-    "href": "posts/published/2026-10-04-exp/index.html",
-    "title": "可复现实验标准",
-    "section": "",
-    "text": "复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 (Sandve 等 2013年)。"
-  },
-  {
-    "objectID": "posts/published/2026-10-04-exp/index.html#背景",
-    "href": "posts/published/2026-10-04-exp/index.html#背景",
-    "title": "可复现实验标准",
-    "section": "",
-    "text": "复现是累计科学成果的基石。新的科学与技术、大量数据、跨学科方法以及所提出的问题复杂性使得结果复现变得越来越复杂，科学家们推进研究的压力也会越来越大。本文介绍一种成熟的允许基于原始数据成功分析与复现的一套实验标准 (Sandve 等 2013年)。"
-  },
-  {
-    "objectID": "posts/published/2026-10-04-exp/index.html#核心内容",
-    "href": "posts/published/2026-10-04-exp/index.html#核心内容",
-    "title": "可复现实验标准",
-    "section": "核心内容",
-    "text": "核心内容\nRule 1: For every result, keep track of how it as produced\n我们要记录所有实验结果是如何产生的。\nRule 2: Avoid manual data manipulation steps\n避免人工操作数据的步骤。\nRule 3: Archive the exact versions of all external programs used\n记录所用的外部程序的版本。\nRule 4: Version control all custom scripts\n对所有脚本进行版本控制。就是每一版脚本更新一次版本号，如果可以的话加上更新的说明。\nRule 5: Record all intermediate results, when possible in standardized formats\n在一个标准化的形式下记录所有中间过程的结果。\nRule 6: For analyses that include randomness, note underlying random seeds\n对于那些用随机数生成器产生的结果，一定要提随机数种子。\nRule 7: Always store raw data behind plots\n一定要保留原始数据。\nRule 8: Generate hierarchical analysis output, allowing layers of increasing detail to be inspected\n生成有层次的数据分析，让每一层数据都能够避免被忽视。\nRule 9: Connect textual statements to underlying results\n对每一个结果都进行文字说明。\nRule 10: Provide public access to scripts ,runs, and results.\n向社会公开脚本、实验过程和结果。"
   }
 ]
