@@ -2,10 +2,10 @@ project:
   type: website
   render:
     - "*.qmd"
-    - "posts/**/*.qmd"
+    - "posts/*published/*.qmd"
 
 website:
-  title: "W.Keith · 科研动态"
+  title: "W.Keith · BLOG"
   site-url: "https://valik601.github.io"
   description: "记录科研进展、论文阅读、实验心得与开源项目"
   favicon: assets/favicon.svg
