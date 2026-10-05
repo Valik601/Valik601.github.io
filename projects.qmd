@@ -1,6 +1,15 @@
 ---
 title: "项目"
 description: "开源项目、实验与研究成果"
+
+listing:
+  contents:
+    - posts/published/**/*.qmd
+  type: grid
+  sort: "date desc"
+  include:
+    type: project
+  fields: [image, title, description, date, categories]
 ---
 
 这里用于展示正在进行或已经完成的研究项目。

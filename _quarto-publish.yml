@@ -1,0 +1,33 @@
+project:
+  output-dir: _site
+  render:
+  - index.qmd
+  - projects.qmd
+  - about.qmd
+  - posts/published/**/*.qmd
+  resources:
+  - assets/**
+  - '!posts/private/**'
+  - '!posts/_private/**'
+  - '!_site-local/**'
+  - '!_freeze/**'
+  pre-render:
+  - quarto run scripts/publish-guard.ts pre
+  post-render:
+  - quarto run scripts/publish-guard.ts post
+website:
+  navbar:
+    left:
+    - href: index.qmd
+      text: 动态
+    - href: projects.qmd
+      text: 项目
+    - href: about.qmd
+      text: 关于
+    right:
+    - aria-label: GitHub
+      href: https://github.com/Valik601
+      icon: github
+    - aria-label: RSS
+      href: index.xml
+      icon: rss

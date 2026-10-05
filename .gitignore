@@ -1,8 +1,7 @@
 /.quarto/
 /_site/
-
-
-**/*.quarto_ipynb
-
-
+/_site-local/
+/_freeze/
+/posts/private/
 /posts/_private/
+**/*.quarto_ipynb

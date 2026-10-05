@@ -1,0 +1,13 @@
+---
+title: "研究工作区"
+description: "未公开项目、实验过程与下一步计划"
+toc: false
+listing:
+  contents: posts/private/**/*.qmd
+  type: default
+  sort: "date desc"
+  categories: true
+  fields: [title, description, date, categories]
+---
+
+这里保留尚未公开的研究记录。成果发表并整理完成后，将文章文件夹移动到 `posts/published/` 即可公开。

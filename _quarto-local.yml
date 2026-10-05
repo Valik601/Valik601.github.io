@@ -1,0 +1,42 @@
+project:
+  output-dir: _site-local
+  render:
+  - index.qmd
+  - projects.qmd
+  - about.qmd
+  - private.qmd
+  - posts/published/**/*.qmd
+  - posts/private/**/*.qmd
+  resources:
+  - assets/**
+  - '!posts/private/**'
+  - '!posts/_private/**'
+  - '!_site-local/**'
+  - '!_freeze/**'
+  preview:
+    host: 127.0.0.1
+    port: 4200
+website:
+  navbar:
+    left:
+    - href: index.qmd
+      text: 动态
+    - href: projects.qmd
+      text: 项目
+    - href: about.qmd
+      text: 关于
+    - href: private.qmd
+      text: 研究工作区
+      icon: lock
+    right:
+    - aria-label: GitHub
+      href: https://github.com/Valik601
+      icon: github
+    - aria-label: RSS
+      href: index.xml
+      icon: rss
+  site-url: http://localhost:4200
+  announcement:
+    content: 本地研究工作区 · 未公开内容仅供本地检查
+    position: below-navbar
+  open-graph: false

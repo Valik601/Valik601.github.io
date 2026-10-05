@@ -1,36 +1,16 @@
 project:
   type: website
-  render:
-    - "*.qmd"
-    - "posts/*published/*.qmd"
-
 website:
-  title: "W.Keith · BLOG"
-  site-url: "https://valik601.github.io"
-  description: "记录科研进展、论文阅读、实验心得与开源项目"
+  title: W.Keith · BLOG
+  site-url: https://valik601.github.io
+  description: 记录科研进展、论文阅读、实验心得与开源项目
   favicon: assets/favicon.svg
-  navbar:
-    left:
-      - href: index.qmd
-        text: 动态
-      - href: projects.qmd
-        text: 项目
-      - href: about.qmd
-        text: 关于
-    right:
-      - icon: github
-        href: https://github.com/Valik601
-        aria-label: GitHub
-      - icon: rss
-        href: index.xml
-        aria-label: RSS
   search:
     location: navbar
     type: overlay
   open-graph: true
   page-footer:
-    center: "© 2026 W.Keith · Built with Quarto"
-
+    center: © 2026 W.Keith · Built with Quarto
 format:
   html:
     theme: flatly
@@ -43,10 +23,9 @@ format:
     code-overflow: wrap
     citations-hover: true
     footnotes-hover: true
-
 execute:
   freeze: auto
-
 bibliography: references.bib
 lang: zh-CN
-
+profile:
+  default: publish
